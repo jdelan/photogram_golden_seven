@@ -2,12 +2,12 @@
 
 <a>Add a new photo</a>
 
-<% @all_photos.each do %>
-  
-<% end %>
+<% @all_photos.each do |the_photo| %>
+<div>
+<img src="<%= the_photo.source%>">
 
-<img src="">
-
-<a href="/photos/5">Show details</a>
+<a href="/photos/<%= the_photo.id%>">Show details</a>
 <a>Edit</a>
 <a>Delete</a>
+</div>
+<% end %>
