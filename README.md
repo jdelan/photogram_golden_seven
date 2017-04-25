@@ -1,4 +1,5 @@
 # Photogram Golden Seven
+<!-- Jesse Delan -->
 
 ## Standard Workflow
 
