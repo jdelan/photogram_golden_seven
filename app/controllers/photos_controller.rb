@@ -25,7 +25,7 @@ class PhotosController < ApplicationController
     p.caption = params["the_caption"]
     p.save
     @all_photos = Photo.order({:created_at => :desc})
-    render("/photos/index.html.erb")
+    redirect_to("/photos")
   end
 
   def edit_form
@@ -38,7 +38,7 @@ class PhotosController < ApplicationController
     p.source = params[:the_source]
     p.caption = params[:the_caption]
     p.save
-    redirect_to("/photos")
+    redirect_to("/photos/#{p.id}")
   end
 
   def delete_photo

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+# Give Home page
+  get("/", {:controller => "photos", :action => "index"})
+
   #CREATE
   get("/photos/new", {:controller => "photos", :action => "new_form"})
   get("/create_photo", {:controller => "photos", :action => "create_row"})
