@@ -1,6 +1,6 @@
 <h1>Photo Details</h1>
 
-<p><%= @the_caption %></p>
+<caption p><%= @the_caption %></caption p>
 
 <img src="<%= @the_image_url %>">
 
@@ -8,4 +8,4 @@
 
 <a href="/photos">Go back</a>
 <a href="/photos/<%= @photo.id %>/edit">Edit</a>
-<a href="delete_photo/<%= @photo.id %>">Delete</a>
+<a href="/delete_photo/<%= @photo.id %>">Delete</a>

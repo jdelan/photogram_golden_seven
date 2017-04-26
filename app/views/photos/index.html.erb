@@ -4,10 +4,11 @@
 
 <% @all_photos.each do |the_photo| %>
 <div class="thumbnail">
+<caption p><%= the_photo.caption%></caption>
 <img src="<%= the_photo.source%>">
 
 <a class="btn btn-default btn-block" href="/photos/<%= the_photo.id%>">Show details</a>
 <a class="btn btn-default btn-block" href="/photos/<%= the_photo.id%>/edit">Edit</a>
-<a class="btn btn-default btn-block">Delete</a>
+<a href="delete_photo/<%= the_photo.id %>" class="btn btn-default btn-block">Delete</a>
 </div>
 <% end %>
